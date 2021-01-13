@@ -6,3 +6,12 @@ modules:
  - name: myHTML5Module
    type: html5
    path: myHTML5Module
+
+ - name: myApp
+   type: nodejs
+   path: myApp
+   provides:
+    - name: myApp_api
+      properties:
+         url: ${default-url}
+

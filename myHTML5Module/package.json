@@ -1,12 +1,20 @@
 {
 	"name": "myHTML5Module-approuter",
 	"engines": {
-		"node": ">=4.0.0 <9.0.0"
+		"node": "10.x"
 	},
 	"dependencies": {
 		"@sap/approuter": "6.1.0"
 	},
+	"devDependencies": {
+	  "gulp": "3.9.1",
+		"gulp-replace": "0.5.4",
+		"jasmine-reporters": "2.1.1",
+		"gulp-jasmine": "2.4.1",
+		"gulp-istanbul": "1.1.1" 
+	},
 	"scripts": {
-		"start": "node node_modules/@sap/approuter/approuter.js"
+		"start": "node node_modules/@sap/approuter/approuter.js",
+		"test": "node ./node_modules/gulp/bin/gulp test"
 	}
 }
