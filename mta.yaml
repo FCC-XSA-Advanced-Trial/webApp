@@ -15,3 +15,12 @@ modules:
       properties:
          url: ${default-url}
 
+
+ - name: calculator
+   type: nodejs
+   path: calculator
+   provides:
+    - name: calculator_api
+      properties:
+         url: ${default-url}
+
