@@ -16,11 +16,21 @@ modules:
          url: ${default-url}
 
 
- - name: calculator
-   type: nodejs
-   path: calculator
-   provides:
-    - name: calculator_api
-      properties:
-         url: ${default-url}
+ 
 
+
+ - name: fcc
+   type: hdb
+   path: fcc
+   requires:
+    - name: hdi_fcc
+
+
+resources:
+ - name: hdi_fcc
+   parameters:
+      config:
+         schema: sapsr3
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
