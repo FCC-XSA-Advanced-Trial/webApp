@@ -12,25 +12,26 @@
 <!-- 2.) Create a UI5 button and place it onto the page -->
 <!-- This is a comment from Warren Clements 2021-01-12 -->
 <script>
-	// create the button instance
-	var myButton = new sap.m.Button("btn");
 
-	// set properties, e.g. the text (there is also a shorter way of setting several properties)
-	myButton.setText("Hello World!");
-
-	// attach an action to the button's "press" event (use jQuery to fade out the button)
-	myButton.attachPress(function(){$("#btn").fadeOut()});
-
-	// place the button into the HTML element defined below
-	myButton.placeAt("uiArea");
 	</script>
+	
+	
+<button id="goToQuotes" class="float-left submit-button" >Famous Quotes</button>
+
+<script type="text/javascript">
+    document.getElementById("goToQuotes").onclick = function () {
+        location.href = "myNewWebPage.html";
+    };
+</script>	
+
+	
 </head>
 <body class="sapUiBody">
 	<!-- This is where you place the UI5 button -->
 	<div id="uiArea"></div>
 	<ol>
 		<li>Do you like to Party?</li>
-		<li>No</li>
+		<li>Of Course</li>
 	</ol>
 </body>
 </html>
